@@ -4,6 +4,7 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
+const { createEvent } = require('./calendar');
 
 const router = express.Router();
 router.get('/', (req, res) => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
-router.get('/addCalendar', (req, res) => res.json({ calendar: "toto" }));
+router.get('/addCalendar', (req, res) => { createEvent(req, res) });
 
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
