@@ -2,7 +2,6 @@
 // id client: 769430780323-5nqndpbel3iu62cdjqcj45p8t8pssprf.apps.googleusercontent.com
 // secret  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
 const axios = require('axios')
-const fetch = require("node-fetch");
 
 const createEvent = (req, res) => {
   console.log({ req })
