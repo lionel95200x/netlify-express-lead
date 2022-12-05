@@ -5,11 +5,11 @@ const axios = require('axios')
 const createEvent = (req, res) => {
   console.log({ req })
   axios.get('https://eo6bf1fgja8meug.m.pipedream.net/', {
-    parms: {
+    params: {
       name: "toto",
       description: "mon evenment",
-      start: "2022-13-12T09:00:00-07:00",
-      end: "2022-13-12T09:00:00-07:00"
+      start: "2022-12-14T09:00:00-07:00",
+      end: "2022-12-14T09:00:00-07:00"
     }
 
   })
